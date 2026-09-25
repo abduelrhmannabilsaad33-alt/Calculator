@@ -1,4 +1,5 @@
 #include<iostream>
+#include <limits>
 using namespace std;
 int main() {
 	int number1, number2;
@@ -11,6 +12,7 @@ int main() {
 	cin >> number1;
 	cout << "Enter the opearation do " << endl;
 	cin >> ope;
+	cin.ignore(numeric_limits<streamsize>::max(), '\n');
 	cout << "Enter Number two " << endl;
 	cin >> number2;
 
@@ -47,7 +49,7 @@ int main() {
 	}
 	cout << "Do you want to continue ? (y / n)"<<endl;
 	cin >> con;
-	} while (con != 'y');
+	} while (con == 'y' || con == 'Y');
 	return 0;
 
 
